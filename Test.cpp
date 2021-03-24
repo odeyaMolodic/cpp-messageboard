@@ -36,9 +36,9 @@ TEST_CASE("Test for empty and large cases") {
     CHECK (board.read(10, 10, Direction::Vertical, 0) == "");
     CHECK (board.read(10, 10, Direction::Horizontal,0 ) == "");
 
-    board_large.post(99999999, 99999999, Direction::Horizontal, "abcdefg"); 
-    CHECK (board_large.read(99999999, 99999999, Direction::Vertical,5) == "a____");
-    CHECK (board_large.read(99999999, 99999999, Direction::Horizontal,5) == "abcde");
+    board.post(99999999, 99999999, Direction::Horizontal, "abcdefg"); 
+    CHECK (board.read(99999999, 99999999, Direction::Vertical,5) == "a____");
+    CHECK (board.read(99999999, 99999999, Direction::Horizontal,5) == "abcde");
     
 }
 
